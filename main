@@ -1,0 +1,59 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String[] namn = {"Elena Gilbert", "Stefan Salvatore", "Damon Salvatore", "Caroline Forbes", "Bonnie Bennett", "Tyler Lockwood", "Matt Donovan", "Alaric Saltzman", "Klaus Mikaelson", "Rebekah Mikaelson"};
+        int[] ålder = {17, 162, 177, 17, 17, 22, 19, 41, 1000, 1012};
+
+        for (int i = 0; i < namn.length; i++) {
+            if (ålder[i] > 20) {
+                continue;
+            }
+            System.out.println("1. " + namn[i] + " " + ålder[i]);
+        }
+
+        for (int i = 0; i < namn.length; i++) {
+            if (ålder[i] > 29 || ålder[i] < 20) {
+                continue;
+            }
+            System.out.println("2. " + namn[i] + " " + ålder[i]);
+        }
+
+        for (int i = 0; i < namn.length; i++) {
+            if (ålder[i] < 29 && ålder[i] > 20) {
+                continue;
+            }
+            System.out.println("3. " + namn[i] + " " + ålder[i]);
+        }
+        int minAge = ålder[0];
+        int maxAge = ålder[0];
+        int maxAgeIndex = 0;
+        for (int i = 0; i < ålder.length; i++) {
+            if (ålder[i] > minAge) {
+                continue;
+            }
+            System.out.println("4. " + namn[i] + " " + ålder[i]);
+        }
+        for (int i = 1; i < ålder.length; i++) {
+            if (ålder[i] > maxAge) {
+                maxAge = ålder[i];
+                maxAgeIndex = i;
+            }
+        }
+        System.out.println("4. " + namn[maxAgeIndex] + " " + ålder[maxAgeIndex]);
+
+        for (int i = 0; i < ålder.length; i++) {
+            if (ålder[i] % 2 == 1) {
+                continue;
+            }
+            System.out.println("5. " + namn[i] + " " + ålder[i]);
+        }
+        for (int i = 0; i < ålder.length; i++) {
+            if (ålder[i] > 40) {
+                break;
+            }
+            System.out.println("6. " + namn[i] + " " + ålder[i]);
+
+
+        }
+    }
+}
